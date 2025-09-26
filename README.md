@@ -18,7 +18,7 @@ Este projeto resolve o problema de encontrar a capacidade máxima de carga que u
 
 1. **Clone ou navegue para o diretório do projeto:**
    ```bash
-   cd /home/victor/puc/Grafos-e-Caminhoes
+   cd ./Grafos-e-Caminhoes
    ```
 
 2. **Crie um ambiente virtual:**
