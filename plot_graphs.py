@@ -30,5 +30,4 @@ def plot_graph(num_islands, num_bridges, bridge_start, bridge_end, bridge_capaci
     
     # Salvar imagem
     plt.savefig('graph.png')
-    print("Grafo salvo como 'graph.png'")
     
