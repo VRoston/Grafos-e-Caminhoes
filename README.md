@@ -48,6 +48,35 @@ Este projeto resolve o problema de encontrar a capacidade máxima de carga que u
      python3 main.py < entrada.txt
      ```
 
+   ## Testes automatizados
+
+   O projeto inclui um arquivo de teste (`test.py`) que executa `main.py` para cada arquivo dentro da pasta `input/` (ou `inputs/`) e compara a saída padrão com o arquivo correspondente em `output/` (ou `outputs/`). A seguir os passos para rodar esses testes.
+
+   1. Instale o `pytest` (recomendado no ambiente virtual):
+      ```bash
+      pip install -U pytest
+      ```
+
+   2. Execute todos os testes (modo silencioso/conciso):
+      ```bash
+      cd ./Grafos-e-Caminhoes
+      MPLBACKEND=Agg python3 -m pytest -q test.py
+      ```
+
+   3. Para ver saída e erros detalhados (não silencioso):
+      ```bash
+      MPLBACKEND=Agg python3 -m pytest test.py -s
+      ```
+
+   Observações:
+   - O teste procura por pastas chamadas `input` ou `inputs` e `output` ou `outputs` no diretório do projeto; os nomes dos arquivos devem corresponder entre as pastas.
+   - `MPLBACKEND=Agg` evita que o matplotlib abra janelas de plotagem durante os testes.
+   - Se preferir executar um único caso manualmente, redirecione o arquivo de entrada para `main.py`:
+     ```bash
+     MPLBACKEND=Agg python3 main.py < input/J_1
+     ```
+
+
 ## Visão geral do funcionamento
 
 O objetivo do trabalho é, para cada entrega (origem, destino), determinar a máxima carga que um caminhão pode atravessar entre duas ilhas considerando as capacidades máximas das pontes. Em vez de rodar um algoritmo de caminho mais largo (variante de Dijkstra) para cada consulta, a solução usa uma abordagem mais eficiente em instâncias grandes:
