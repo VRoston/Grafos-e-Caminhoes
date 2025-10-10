@@ -1,4 +1,3 @@
-# ...existing code...
 import networkx as nx
 import matplotlib.pyplot as plt
 
@@ -34,4 +33,3 @@ def plot_graph(num_islands, num_bridges, bridge_start, bridge_end, bridge_capaci
     plt.title("Pontes de Interesse (em vermelho) — nós conectores mostrados")
     plt.tight_layout()
     plt.savefig('graph.png')
-# ...existing code...
